@@ -24,6 +24,7 @@
          <li> HTML CSS JavaScript </li>
          <!-- Podemos ver el historial de commits con git log. Este comando tiene banderas muy interesantes: git log --oneline-> permite ver el historial de commits reducidos sólo a una línea; git log -p-> permite ver en detalle los cambios del archivo, la línea que se modificó o se insertó (o se borró). Podemos consultar más banderas de este comando aquí: https://devhints.io/git-log -->
          <!--Además, con git log --graph podemos ver de forma gráfica el timeline de los commits, incluyendo las branches y sus merges-->
+         <!--Más aún con git log -n 2 podemos ver la información de los últimos 2 logs de nuestr código-->
      <!--Ahora para juntar el trabajo podemos usar desde la rama principal (tallo, para nuestra visualización) que para el caso es la rama master, el comando git merge ramaQueQueremosJuntarAlMaster. Este comando juntará ambas ramas, sin embargo en el historial no aparecerán los commits que hicimos en la rama que queremos mergear(los cambios de los commits sí que aparecerán, pero no el historial de commits). Lo que puede ocasionar confusiones. 
      Por otro lado, si queremos que la rama master (rama principal) tenga el historial de la rama que queremos unirle, podemos usar git rebase ramaQueQueremosJuntarAlMaster el resultado es el mismo, pero ahora, al hacer git rebase, la rama master contiene todo el historial de commits que se hicieron previamente sólo en la rama alterna -->
          <li> Kubernetes: Introducción a la orquestación de containers </li> <!--Lista añadida como parte del ejercicio en ramas-->
@@ -44,4 +45,6 @@
 
 <!--Si queremos ver la diferencia entre dos commits podemos usar                                              git diff idDelCodigoDesdeElcualQueremosVerlosCambios..idDelCodigoHastaElcualQueremosVerlosCambios   También si queremos ver los cambios aunque no los hayamos commiteado podemos hacer git diff así solito-->
 
+<!--Con git podemos crear tags o banderas de nuestro código, tal que se comporten como versiones. Es decir que en x commit nuestro código está listo para ser lanzado al mercado. Un tag marca un punto en nuestra aplicación tal que no puede ser modificado, es fijo. Cualquier modificación se agrega a la versión siguiente de nuestro código, esto no quiere decir que el código se vuelva inmodificable, sino que (funciona como los checkpoints en los juegos) es un punto exacto (como una foto) donde dejamos el código y al que podemos volver cuantas veces querramos. Para ello usamos git tag -a nombreDelTag -m "mensaje del tag/nombre" para añadir una nueva tag y simultáneamente darle nombre al tag. -->
+<!--Con git tag (solito) podemos ver todas las versiones o tags que hemos creado. Y aún más interesante podemos hacer push del tag a nuestro servidor(local o remoto) así como enviamos una branch:                    git push servidorLocal nombreDelTag // git push origin nombreDelTag (para el servidor en github)-->
 </html>
