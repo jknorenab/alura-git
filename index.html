@@ -5,6 +5,12 @@
 <head>
      <meta charset = "UTF-8">
      <title> Cursos de Alura </title>
+     <!--Branches: Son como bifurcaciones de nuestro código que nos permite trabajar simultáneamente sobre los archivos pero en diferentes líneas de código: Revisar https://git-school.github.io/visualizing-git/ para más detalles
+     git branch (lista las ramas que tengo en mi repositorio)
+     git branch nombreRama (crea una nueva rama)
+     git checkout nombreRamaDestino (nos cambia de la rama actual a la nueva rama nombreRamaDestino)
+     git checkout -b nuevaRama (este nos permite crear una rama nuevaRama y luego movernos a ella para empezar a trabajar allí)
+     -->
 </head>
 <body>
      <ul>
@@ -22,5 +28,10 @@
 <!--Enviamos información de nuestro repositorio local al remoto a través del comando: git push nombreRepositorioRemoto (o sea, destino) ramaQueQuieroEnviar (o sea origen)-->
 <!--Cuando nosotros agregamos un repositorio remoto git le pone nombre por defecto: origin. Podemos renombrarlo usando el comando git remote renome nombreActual nuevoNombre-->
 <!--Finalmente para que Ana traiga la información del repo, usamos git pull nombreRepositorioRemoto (o sea donde está la información que quiero traer) ramaQueQuieroTraer (o sea rama que quiero copiar)-->
-<!---->
+<!--Ahora, configuramos un repositorio no local, sino en la web con GitHub. GitHub nos provee una interfaz super rica para controlar y manejar nuestro repositorio remoto. Lo importante a considerar son los comandos para compartir información: 
+
+     git remote add origin https://github.com/jknorenab/alura-git.git  Aquí, le estamos diciendo a nuestro repositorio local que se conecte con un repositorio remoto con nombre Origin localizado en la web. Origin es el nombre por defecto del repositorio remoto en Github. 
+
+     git push -u  origin master  Envía la información que tenemos en nuestra rama local master a la rama remota master en el repositorio remoto Origin, la bandera -u nos permite conectarles permanentemente, de forma que todo lo que envío desde master (localmente) va a master (remotamente). Esto permite que luego de este comando baste con hacer git push, para enviar los archivos e informaciones. El comando: git push origin master me permite tener más control sobre la rama desde la que envío y la rama a la que llega, de modo que si no uso la bandera -u, tendré siempre que indicar desde donde tomo y hacia donde lo envío
+-->
 </html>
